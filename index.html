@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago - DevOps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="square"></div>
+    <div class="container" id="home">
+        <img src="images/perfil.jpg" alt="Foto de Thiago" class="profile-pic">
+        <div>
+            <h1>HEY, I AM THIAGO ARAÚJO</h1>
+            <h2>DESENVOLVEDOR</h2>
+            <p>I am a graphic designer, UX/UI designer & front-end web developer</p>
+            <div class="buttons">
+                <button onclick="scrollToSection('portfolio')">see my projects</button>
+                <button onclick="scrollToSection('contact')">contact me</button>
+            </div>
+        </div>
+        <div class="square"></div>
+    </div>
+    
+    <div class="down-arrow" onclick="scrollToSection('skills')">↓</div>
+    
+    <div class="menu-icon" onclick="toggleMenu()">𓃑</div>
+    <div class="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="skills-section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="images/html.png" alt="HTML Icon">
+            </div>
+            <div class="skill-card">
+                <img src="images/css.png" alt="CSS Icon">
+            </div>
+            <div class="skill-card">
+                <img src="images/js.png" alt="CSS Icon">
+            </div>
+            <div class="skill-card">
+                <img src="images/bootstrap.png" alt="CSS Icon">
+            </div>
+            <div class="skill-card">
+                <img src="images/angular.png" alt="CSS Icon">
+            </div>
+            <div class="skill-card">
+                <img src="images/react.png" alt="CSS Icon">
+            </div>
+            <!-- Adicione mais cartões de habilidades conforme necessário -->
+        </div>
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio-content">
+            <div class="portfolio-cards">
+                <div class="project-card">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="project-card">
+                    <img src="projeto2.jpg" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="project-card">
+                    <img src="projeto3.jpg" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-text">
+            <p>Entre em contato para discutir suas ideias e projetos!</p>
+        </div>
+        <form id="contactForm">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://github.com/yourusername" target="_blank">
+                <img src="images/git.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Thiago Araújo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
