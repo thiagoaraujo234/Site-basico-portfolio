@@ -1,0 +1,245 @@
+body {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.home-text {
+    margin-top: 20px;
+}
+.down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+.menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.menu.open {
+    display: block;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    margin: 10px 0;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.buttons {
+    margin-top: 20px;
+}
+button {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+button:hover {
+    background: #00ff33;
+    color: white;
+}
+
+.skills-section {
+    padding: 60px 20px;
+    background: white; /* Fundo branco */
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    margin-top: 20px; /* Espaço acima dos cards */
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 120px; /* Largura fixa */
+    transition: transform 0.3s;
+}
+
+.skill-card img {
+    width: 100px; /* Largura do ícone */
+    height: 100px; /* Altura do ícone */
+    margin-bottom: 10px; /* Espaço abaixo do ícone */
+}
+
+.portfolio-section, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.skills-carousel, .portfolio-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.project-card {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.project-card img {
+    width: 100px;
+    height: 100px;
+}
+.skill-card:hover, .project-card:hover {
+    transform: scale(1.1);
+}
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background: white;
+    text-align: left;
+}
+
+.contact-text {
+    flex: 1;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.contact-section form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+    box-shadow: 0 0 5px #007BFF;
+    transform: translateY(-5px);
+}
+
+.contact-section button {
+    background: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-section button:hover {
+    background: #007BFF;
+    color: white;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skills-carousel, .portfolio-carousel {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: calc(100% - 40px);
+    }
+
+    .contact-section {
+        flex-direction: column;
+        
+    }
+
+    .contact-text {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .contact-section form {
+        width: 100%;
+    }
+}

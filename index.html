@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago - DevOps</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 <body>
-    <div class="square"></div>
     <div class="container" id="home">
-        <img src="images/perfil.jpg" alt="Foto de Thiago" class="profile-pic">
-        <div>
+        <img src="src/images/perfil.jpg" alt="Foto de Thiago" class="profile-pic">
+        <div class="home-text">
             <h1>HEY, I AM THIAGO ARAÚJO</h1>
             <h2>DESENVOLVEDOR</h2>
             <p>I am a graphic designer, UX/UI designer & front-end web developer</p>
@@ -18,12 +19,10 @@
                 <button onclick="scrollToSection('portfolio')">see my projects</button>
                 <button onclick="scrollToSection('contact')">contact me</button>
             </div>
+            
         </div>
-        <div class="square"></div>
+        <div class="down-arrow" onclick="scrollToSection('skills')">˅</div>
     </div>
-    
-    <div class="down-arrow" onclick="scrollToSection('skills')">↓</div>
-    
     <div class="menu-icon" onclick="toggleMenu()">𓃑</div>
     <div class="menu">
         <ul>
@@ -36,60 +35,56 @@
 
     <div class="skills-section" id="skills">
         <h2>Skills</h2>
-        <div class="skills-container">
+        <div class="skills-carousel">
             <div class="skill-card">
-                <img src="images/html.png" alt="HTML Icon">
+                <img src="src/images/html.png" alt="HTML Icon">
             </div>
             <div class="skill-card">
-                <img src="images/css.png" alt="CSS Icon">
+                <img src="src/images/css.png" alt="CSS Icon">
             </div>
             <div class="skill-card">
-                <img src="images/js.png" alt="CSS Icon">
+                <img src="src/images/js.png" alt="JS Icon">
             </div>
             <div class="skill-card">
-                <img src="images/bootstrap.png" alt="CSS Icon">
+                <img src="src/images/bootstrap.png" alt="Bootstrap Icon">
             </div>
             <div class="skill-card">
-                <img src="images/angular.png" alt="CSS Icon">
+                <img src="src/images/angular.png" alt="Angular Icon">
             </div>
             <div class="skill-card">
-                <img src="images/react.png" alt="CSS Icon">
+                <img src="src/images/react.png" alt="React Icon">
             </div>
-            <!-- Adicione mais cartões de habilidades conforme necessário -->
         </div>
     </div>
 
-    <div class="portfolio-section">
+    <div class="portfolio-section" id="portfolio">
         <h2>Meu Portfólio</h2>
-        <div class="portfolio-content">
-            <div class="portfolio-cards">
-                <div class="project-card">
-                    <img src="projeto1.jpg" alt="Projeto 1">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição do projeto 1.</p>
-                </div>
-                <div class="project-card">
-                    <img src="projeto2.jpg" alt="Projeto 2">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição do projeto 2.</p>
-                </div>
-                <div class="project-card">
-                    <img src="projeto3.jpg" alt="Projeto 3">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição do projeto 3.</p>
-                </div>
-                <!-- Adicione mais cards conforme necessário -->
+        <div class="portfolio-carousel">
+            <div class="project-card">
+                <img src="projeto1.jpg" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
             </div>
+            <div class="project-card">
+                <img src="projeto2.jpg" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+            </div>
+            <div class="project-card">
+                <img src="projeto3.jpg" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto 3.</p>
             </div>
         </div>
     </div>
-    
+
     <div class="contact-section" id="contact">
-        <h2>Contact Me</h2>
+       
         <div class="contact-text">
             <p>Entre em contato para discutir suas ideias e projetos!</p>
         </div>
         <form id="contactForm">
+            <h2>Contact Me</h2>
             <input type="text" placeholder="Seu Nome" required>
             <input type="email" placeholder="Seu Email" required>
             <textarea placeholder="Sua Mensagem" required></textarea>
@@ -97,13 +92,13 @@
         </form>
         <div class="social-icons">
             <a href="https://github.com/yourusername" target="_blank">
-                <img src="images/git.png" alt="GitHub">
+                <img src="src/images/git.png" alt="GitHub">
             </a>
             <a href="https://linkedin.com/in/yourusername" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn">
+                <img src="src/images/linkedin.png" alt="LinkedIn">
             </a>
             <a href="https://instagram.com/yourusername" target="_blank">
-                <img src="images/instagram.png" alt="Instagram">
+                <img src="src/images/instagram.png" alt="Instagram">
             </a>
         </div>
     </div>
@@ -112,6 +107,8 @@
         <p>Desenvolvido por Thiago Araújo</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="src/js/scripts.js"></script>
 </body>
 </html>
