@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: linear-gradient(120deg, #cf84fa 0%, #8d2aff 100%);
     font-family: 'Arial', sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -11,9 +11,12 @@ body {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    background: url('../images/bg.jpg') no-repeat center center/cover;
 }
 .home-text {
     margin-top: 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
 }
 .down-arrow {
     position: absolute;
@@ -22,18 +25,33 @@ body {
     transform: translateX(-50%);
     font-size: 2rem;
     cursor: pointer;
+    animation: bounce 2s infinite; /* Animação da seta */
+    color: white;
 }
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
 .menu-icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2em;
+    top: 40px;
+    right: 40px;
+    font-size: 3em;
     cursor: pointer;
+    color: white;
 }
 .menu {
     display: none;
     position: fixed;
-    top: 50px;
+    top: 100px;
     right: 10px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
@@ -75,14 +93,15 @@ button {
     transition: background 0.3s, color 0.3s;
 }
 button:hover {
-    background: #00ff33;
+    background: #b700ff;
     color: white;
 }
 
 .skills-section {
-    padding: 60px 20px;
+    padding: 5px;
     background: white; /* Fundo branco */
     text-align: center;
+    font-size: 2.5em;
 }
 
 .skills-container {
@@ -95,11 +114,12 @@ button:hover {
 .skill-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     padding: 20px;
     text-align: center;
     width: 120px; /* Largura fixa */
     transition: transform 0.3s;
+    
 }
 
 .skill-card img {
@@ -108,8 +128,12 @@ button:hover {
     margin-bottom: 10px; /* Espaço abaixo do ícone */
 }
 
+.portfolio-text {
+    color: white;
+    font-size: 2.5em;
+}
 .portfolio-section, .contact-section {
-    padding: 60px 20px;
+    padding: 5px;
     text-align: center;
 }
 .skills-carousel, .portfolio-carousel {
@@ -137,16 +161,17 @@ button:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
     padding: 60px 20px;
     background: white;
     text-align: left;
+    height: 100vh; /* Ajusta a altura da seção para preencher a tela */
 }
 
 .contact-text {
     flex: 1;
-    font-size: 1.5em;
-    margin-right: 20px;
+    font-size: 2.5em;
+    margin-left: 5%; /* Adiciona espaço à esquerda do texto */
+    margin-right: 20px; /* Adiciona espaço à direita do texto para separar do formulário */
 }
 
 .contact-section form {
@@ -189,23 +214,36 @@ button:hover {
     color: white;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        height: auto; /* Ajusta a altura da seção para conteúdo */
+    }
+    .contact-text {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 0; /* Remove o espaçamento lateral em telas pequenas */
+    }
+    .contact-section form {
+        width: 100%;
+    }
+}
+
 /* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: auto;
 }
-
 .social-icons a {
     margin: 0 10px;
 }
-
 .social-icons img {
     width: 50px;
     height: 50px;
     transition: transform 0.3s;
 }
-
 .social-icons a:hover img {
     transform: scale(1.2);
 }
@@ -213,7 +251,7 @@ button:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
 }
@@ -223,22 +261,18 @@ footer {
     .skills-carousel, .portfolio-carousel {
         flex-direction: column;
     }
-
     .project-card {
         width: calc(100% - 40px);
     }
-
     .contact-section {
         flex-direction: column;
-        
+        height: auto; /* Ajusta a altura da seção para conteúdo */
     }
-
     .contact-text {
         text-align: center;
         margin-bottom: 20px;
         margin-right: 0;
     }
-
     .contact-section form {
         width: 100%;
     }

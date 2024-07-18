@@ -10,7 +10,7 @@ function scrollToSection(sectionId) {
 $(document).ready(function(){
     $('.skills-carousel').slick({
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -18,7 +18,7 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 3
                 }
             },
             {
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     $('.portfolio-carousel').slick({
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
