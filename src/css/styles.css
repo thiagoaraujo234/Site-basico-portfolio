@@ -1,9 +1,11 @@
+/* General Styles */
 body {
     background: linear-gradient(120deg, #cf84fa 0%, #8d2aff 100%);
     font-family: 'Arial', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,11 +15,13 @@ body {
     text-align: center;
     background: url('../images/bg.jpg') no-repeat center center/cover;
 }
+
 .home-text {
     margin-top: 20px;
     color: #ffffff;
     font-size: 1.5rem;
 }
+
 .down-arrow {
     position: absolute;
     bottom: 20px;
@@ -25,9 +29,10 @@ body {
     transform: translateX(-50%);
     font-size: 2rem;
     cursor: pointer;
-    animation: bounce 2s infinite; /* Animação da seta */
+    animation: bounce 2s infinite;
     color: white;
 }
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -48,6 +53,7 @@ body {
     cursor: pointer;
     color: white;
 }
+
 .menu {
     display: none;
     position: fixed;
@@ -58,30 +64,37 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
+
 .menu.open {
     display: block;
 }
+
 .menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .menu ul li {
     margin: 10px 0;
 }
+
 .menu ul li a {
     color: white;
     text-decoration: none;
 }
+
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
+
 .buttons {
     margin-top: 20px;
 }
+
 button {
     background: transparent;
     color: #ffffff;
@@ -92,23 +105,25 @@ button {
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
+
 button:hover {
     background: #b700ff;
     color: white;
 }
 
+/* Skills Section */
 .skills-section {
     padding: 5px;
-    background: white; /* Fundo branco */
+    background: white;
     text-align: center;
     font-size: 2.5em;
 }
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    margin-top: 20px; /* Espaço acima dos cards */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .skill-card {
@@ -117,45 +132,58 @@ button:hover {
     margin: 5px;
     padding: 20px;
     text-align: center;
-    width: 120px; /* Largura fixa */
+    width: 120px;
     transition: transform 0.3s;
-    
 }
 
 .skill-card img {
-    width: 100px; /* Largura do ícone */
-    height: 100px; /* Altura do ícone */
-    margin-bottom: 10px; /* Espaço abaixo do ícone */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+/* Portfolio Section */
 .portfolio-text {
     color: white;
     font-size: 2.5em;
 }
-.portfolio-section, .contact-section {
+
+.portfolio-section {
     padding: 5px;
     text-align: center;
+    background-color: rgb(53, 53, 53);
+    height: 70vh;
 }
+
 .skills-carousel, .portfolio-carousel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
+
 .project-card {
     margin: 10px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.7s;
+    height: 500px;
 }
+
 .project-card img {
     width: 100px;
     height: 100px;
 }
-.skill-card:hover, .project-card:hover {
+
+.project-card:hover {
     transform: scale(1.1);
 }
+
 /* Contact Section */
 .contact-section {
     display: flex;
@@ -164,14 +192,14 @@ button:hover {
     padding: 60px 20px;
     background: white;
     text-align: left;
-    height: 100vh; /* Ajusta a altura da seção para preencher a tela */
+    height: 100vh;
 }
 
 .contact-text {
     flex: 1;
     font-size: 2.5em;
-    margin-left: 5%; /* Adiciona espaço à esquerda do texto */
-    margin-right: 20px; /* Adiciona espaço à direita do texto para separar do formulário */
+    margin-left: 5%;
+    margin-right: 20px;
 }
 
 .contact-section form {
@@ -214,36 +242,23 @@ button:hover {
     color: white;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-        height: auto; /* Ajusta a altura da seção para conteúdo */
-    }
-    .contact-text {
-        text-align: center;
-        margin-bottom: 20px;
-        margin-left: 0; /* Remove o espaçamento lateral em telas pequenas */
-    }
-    .contact-section form {
-        width: 100%;
-    }
-}
-
 /* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
     margin-top: auto;
 }
+
 .social-icons a {
     margin: 0 10px;
 }
+
 .social-icons img {
     width: 50px;
     height: 50px;
     transition: transform 0.3s;
 }
+
 .social-icons a:hover img {
     transform: scale(1.2);
 }
@@ -261,18 +276,23 @@ footer {
     .skills-carousel, .portfolio-carousel {
         flex-direction: column;
     }
+
     .project-card {
         width: calc(100% - 40px);
     }
+
     .contact-section {
         flex-direction: column;
-        height: auto; /* Ajusta a altura da seção para conteúdo */
+        height: auto;
     }
+
     .contact-text {
         text-align: center;
         margin-bottom: 20px;
+        margin-left: 0;
         margin-right: 0;
     }
+
     .contact-section form {
         width: 100%;
     }
