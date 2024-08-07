@@ -18,13 +18,13 @@ $(document).ready(function(){
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 5
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 3
                 }
             }
         ]
@@ -44,5 +44,18 @@ $(document).ready(function(){
                 }
             }
         ]
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    skillCards.forEach(card => {
+        const skillLevel = card.getAttribute('data-skill');
+        const progressBar = card.querySelector('.progress-bar');
+        const progressPercentage = document.createElement('div');
+        progressPercentage.classList.add('progress-percentage');
+        progressPercentage.textContent = skillLevel + '%';
+        card.querySelector('.progress').appendChild(progressPercentage);
+        progressBar.style.setProperty('--skill-level', skillLevel + '%');
     });
 });
